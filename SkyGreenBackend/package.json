@@ -1,0 +1,42 @@
+{
+  "name": "appbackend",
+  "version": "1.0.0",
+  "description": "backend for app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerminebenmassoued/Backend"
+  },
+  "author": "nermine ",
+  "license": "ISC",
+  "bugs": {
+    "url": "git+https://github.com/nerminebenmassoued/Backend/issues"
+  },
+  "homepage": "git+https://github.com/nerminebenmassoued/Backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "express-validator": "^6.15.0",
+    "google-auth-library": "^9.2.0",
+    "luxon": "^3.3.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^7.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "stripe": "^12.2.0",
+    "url": "^0.11.3"
+  }
+}
