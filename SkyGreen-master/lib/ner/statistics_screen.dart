@@ -149,23 +149,23 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
           barGroups: [
             BarChartGroupData(
               x: 0,
-              barRods: [BarChartRodData(y: 5, width: 16)],
+              barRods: [BarChartRodData( width: 16, y: 5)],
               showingTooltipIndicators: [0],
             ),
             BarChartGroupData(
               x: 1,
-              barRods: [BarChartRodData(y: 8, width: 16)],
+              barRods: [BarChartRodData( width: 16,  y: 5)],
               showingTooltipIndicators: [0],
             ),
             BarChartGroupData(
               x: 2,
-              barRods: [BarChartRodData(y: 6, width: 16)],
+              barRods: [BarChartRodData( width: 16,  y: 5)],
               showingTooltipIndicators: [0],
             ),
           ],
           titlesData: FlTitlesData(
-            leftTitles: SideTitles(showTitles: true),
-            bottomTitles: SideTitles(showTitles: true),
+           // leftTitles: SideTitles(showTitles: true),
+          //  bottomTitles: SideTitles(showTitles: true),
           ),
         ),
       ),
