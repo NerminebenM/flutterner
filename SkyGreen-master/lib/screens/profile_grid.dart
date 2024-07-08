@@ -23,7 +23,7 @@ class _ProfileGridState extends State<ProfileGrid> {
 
   _loadProfile() async {
     setState(() {
-      _username = 'alaeddine rezgani';
+      _username = 'Nermine';
       _profession = 'Flutter Developer';
       _avatarUrl =
           'assets/images/pfp.jpg'; // Replace with your actual avatar asset
@@ -36,7 +36,7 @@ class _ProfileGridState extends State<ProfileGrid> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -55,7 +55,7 @@ class _ProfileGridState extends State<ProfileGrid> {
         ),
         centerTitle: true,
       ),
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.blue,
       body: Column(
         children: [
           _buildProfileHeaderAndStats(),
@@ -93,7 +93,7 @@ class _ProfileGridState extends State<ProfileGrid> {
               Text(_profession,
                   style: TextStyle(fontSize: 18, color: Colors.white)),
               _buildStatItem('Posts', _postsCount),
-              _buildStatItem('freinds', _freindsCount),
+              _buildStatItem('Books', _freindsCount),
             ],
           ),
         ],
@@ -127,7 +127,7 @@ class _ProfileGridState extends State<ProfileGrid> {
           _buildButton('Edit Profile', () {
             Navigator.pushNamed(context, "/updateProfile");
           }),
-          _buildButton('Promotions', () {
+          _buildButton('Books', () {
             // Define action for Promotions button
           }),
           _buildButton('Contacts', () {
@@ -141,7 +141,7 @@ class _ProfileGridState extends State<ProfileGrid> {
   Widget _buildButton(String title, VoidCallback onPressed) {
     return ElevatedButton(
       onPressed: onPressed,
-      child: Text(title, style: TextStyle(color: Colors.green)),
+      child: Text(title, style: TextStyle(color: Colors.blue)),
       style: ElevatedButton.styleFrom(
         //primary: Colors.white,
        // onPrimary: Colors.green,

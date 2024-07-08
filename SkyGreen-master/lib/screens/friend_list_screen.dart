@@ -70,7 +70,7 @@ class _FriendListScreenState extends State<FriendListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -89,7 +89,7 @@ class _FriendListScreenState extends State<FriendListScreen> {
         ),
         centerTitle: true,
       ),
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.blue,
       body: Column(
         children: [
           Padding(
@@ -101,7 +101,7 @@ class _FriendListScreenState extends State<FriendListScreen> {
                 hintStyle: TextStyle(color: Colors.white),
                 prefixIcon: Icon(LineAwesomeIcons.search, color: Colors.white),
                 filled: true,
-                fillColor: Colors.green[700],
+                fillColor: Colors.blue[700],
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide.none,
@@ -124,7 +124,7 @@ class _FriendListScreenState extends State<FriendListScreen> {
                     ),
                     title: Text(
                       friend.name,
-                      style: TextStyle(color: Colors.green),
+                      style: TextStyle(color: Colors.blue),
                     ),
                     subtitle: Text(
                       friend.profession,
@@ -134,11 +134,11 @@ class _FriendListScreenState extends State<FriendListScreen> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.sms, color: Colors.green),
+                          icon: Icon(Icons.sms, color: Colors.blue),
                           onPressed: () => _messageFriend(friend),
                         ),
                         IconButton(
-                          icon: Icon(Icons.phone, color: Colors.green),
+                          icon: Icon(Icons.phone, color: Colors.blue),
                           onPressed: () => _callFriend(friend),
                         ),
                         IconButton(

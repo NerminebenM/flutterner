@@ -95,7 +95,7 @@ import 'recherche.dart';
 // }
 // main.dart
 
-void main() {
+/*void main() {
   runApp(const MyApp());
 }
 
@@ -202,4 +202,4 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-}
+}*/

@@ -4,7 +4,7 @@ import 'dashboard.dart';
 import 'profile_detail.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-class RechercheScreen extends StatefulWidget {
+/*class RechercheScreen extends StatefulWidget {
   final Profile user;
 
   RechercheScreen({required this.user});
@@ -41,7 +41,7 @@ class _RechercheScreenState extends State<RechercheScreen> {
   //     isAdmin: false,
   //   ),
   // ];
-  List<Profile> profiles = [];
+ List<Profile> profiles = [];
   @override
   void initState() {
     super.initState();
@@ -123,4 +123,4 @@ class ProfileWidget extends StatelessWidget {
       ),
     );
   }
-}
+}*/

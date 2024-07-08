@@ -37,7 +37,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -56,7 +56,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
         ),
         centerTitle: true,
       ),
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.blue,
       body: ProgressHUD(
         key: _progressHUDKey,
         child: Form(
@@ -115,7 +115,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                     fit: BoxFit.cover,
                                     image: AssetImage("assets/images/pfp.jpg"),
                                     colorFilter: ColorFilter.mode(
-                                      Colors.green.withOpacity(0.3),
+                                      Colors.blue.withOpacity(0.3),
                                       BlendMode.dstATop,
                                     ),
                                   ),
@@ -131,7 +131,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(width: 4, color: Colors.white),
-                          color: Colors.green),
+                          color: Colors.blue),
                       child: InkWell(
                         onTap: () {
                           showBottomSheet();
@@ -236,7 +236,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.green,
+                foregroundColor: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -264,7 +264,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                     TextSpan(
                       text: 'Joined on  ',
                       style: TextStyle(
-                        color: Colors.lightGreenAccent,
+                        color: Colors.lightBlueAccent,
                       ),
                     ),
                     TextSpan(

@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         body: ProgressHUD(
           key: _progressHUDKey,
           child: Form(
@@ -175,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.green,
+                foregroundColor: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),

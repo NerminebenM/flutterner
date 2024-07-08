@@ -28,7 +28,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         body: ProgressHUD(
           child: Form(
             key: globalFormKey,
@@ -123,7 +123,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               fit: BoxFit.cover,
                               image: AssetImage("assets/images/pfp.jpg"),
                               colorFilter: ColorFilter.mode(
-                                Colors.green.withOpacity(0.3),
+                                Colors.blue.withOpacity(0.3),
                                 BlendMode.dstATop,
                               ),
                             ),
@@ -139,7 +139,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(width: 4, color: Colors.white),
-                        color: Colors.green),
+                        color: Colors.blue),
                     child: InkWell(
                       onTap: () {
                         showBottomSheet();
@@ -243,7 +243,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.green,
+                foregroundColor: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -281,7 +281,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     TextSpan(
                       text: 'you have already an account ? ',
                       style: TextStyle(
-                        color: Colors.lightGreenAccent,
+                        color: Colors.lightBlueAccent,
                       ),
                     ),
                     TextSpan(
@@ -345,7 +345,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
   }
 
-  Future<void> _pickImage() async {
+  /*Future<void> _pickImage() async {
     final imagePicker = ImagePicker();
     final XFile? pickedImage =
         await imagePicker.pickImage(source: ImageSource.gallery);
@@ -355,7 +355,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
       });
       Navigator.of(context).pop();
     }
+  }*/
+  Future<void> _pickImage() async {
+    final imagePicker = ImagePicker();
+    try {
+      final XFile? pickedImage =
+      await imagePicker.pickImage(source: ImageSource.gallery);
+      if (pickedImage != null) {
+        setState(() {
+          capturedImage = File(pickedImage.path);
+        });
+        Navigator.of(context).pop();
+      }
+    } catch (e) {
+      print('Error picking image: $e');
+      // Affichez une alerte ou gérez l'erreur d'une autre manière
+    }
   }
+
 
   Future<void> signUpUser() async {
     final prefs = await SharedPreferences.getInstance();
@@ -395,7 +412,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         await prefs.setString('email', response['email']);
 
         // Navigate to the profile screen
-        Navigator.pushNamed(context, '/profile');
+        Navigator.pushNamed(context, '/login');
       } else {
         // Handle the error, you might want to show an alert to the user
         print('Error: ${response['message']}');

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:sky_green/achref/chats/chat.dart';
 //import 'package:sky_green/achref/post/AddPostScreen.dart';
-//import 'package:sky_green/achref/post/listpost/PostList.dart';
+import 'package:sky_green/achref/post/listpost/PostList.dart';
 import 'package:sky_green/screens/forget_password_screen.dart';
 import 'package:sky_green/screens/friend_list_screen.dart';
 import 'package:sky_green/screens/login_screen.dart';
@@ -30,14 +30,14 @@ class MyApp extends StatelessWidget {
       title: 'skygreen',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       routes: {
         '/': (context) => _defaultHome,
         '/forget': (context) => ForgetPasswordScreen(),
 
-        '/friends': (context) => FriendListScreen(),
+       // '/friends': (context) => FriendListScreen(),
         '/grid': (context) => ProfileGrid(),
 
         '/login': (context) => LoginScreen(),
@@ -45,13 +45,12 @@ class MyApp extends StatelessWidget {
         '/register': (context) => RegisterScreen(),
         '/profile': (context) => ProfileScreen(),
         '/updateProfile': (context) => UpdateProfileScreen(),
-//asmaaaaaap=======================================================
-        '/events': (context) => Home(),
-        '/adminEvent': (context) => AdminPanelEvent(),
+      //  '/events': (context) => Home(),
+      //  '/adminEvent': (context) => AdminPanelEvent(),
 /////////////app
       //  '/chat': (context) => chat(),
        // '/addpost': (context) => AddPostScreen(),
-       // '/listpost': (context) => PostList(),
+       '/listpost': (context) => PostList(),
 /////nerr
       //  '/dashboard': (context) => DashboardScreen(),
        // '/feedscreen': (context) => FeedScreen(),

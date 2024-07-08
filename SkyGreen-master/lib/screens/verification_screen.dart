@@ -54,7 +54,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -75,7 +75,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: Colors.blue,
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -138,7 +138,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   onPressed: () => verifyRecoveryCode(context),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    foregroundColor: Colors.green,
+                    foregroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),

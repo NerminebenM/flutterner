@@ -32,7 +32,7 @@ class ForgetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -53,7 +53,7 @@ class ForgetPasswordScreen extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: Colors.blue,
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -83,7 +83,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                 onPressed: () => sendRecoveryCode(context),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  foregroundColor: Colors.green,
+                  foregroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),

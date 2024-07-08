@@ -91,7 +91,7 @@ import 'dart:convert';
 // }
 // dashboard.dart
 
-class DashboardScreen extends StatefulWidget {
+/*class DashboardScreen extends StatefulWidget {
   final Profile user;
 
   DashboardScreen({required this.user});
@@ -195,4 +195,4 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ],
     );
   }
-}
+}*/

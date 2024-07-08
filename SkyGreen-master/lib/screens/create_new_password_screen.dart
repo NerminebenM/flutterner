@@ -47,7 +47,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -68,7 +68,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: Colors.blue,
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -138,7 +138,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  foregroundColor: Colors.green,
+                  foregroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),

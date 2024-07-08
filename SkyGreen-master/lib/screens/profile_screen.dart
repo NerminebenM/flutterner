@@ -37,9 +37,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.green,
+          color: Colors.blue,
           padding: const EdgeInsets.all(10),
           child: Column(
             children: [
@@ -127,7 +127,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  foregroundColor: Colors.green,
+                  foregroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -172,8 +172,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ProfileMenuWidget(
                 title: "Information",
                 icon: LineAwesomeIcons.info,
-                onPress: () {},
+                onPress: () {
+                  Navigator.pushNamed(context, '/grid');
+                },
               ),
+
               Container(
                 width: MediaQuery.of(context).size.width *
                     0.7, // 70% of screen width
@@ -229,32 +232,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
         onTap: (index) {
           _currentIndex = index;
           switch (index) {
+
+
+
             case 0:
-              Navigator.pushNamed(context, '/chat');
-              break;
-            case 1:
               Navigator.pushNamed(context, '/listpost');
               break;
-            case 2:
-              Navigator.pushNamed(context, '/addpost');
-              break;
 
-            case 3:
+
+            case 1:
               Navigator.pushNamed(context, '/adminEvent');
               break;
-            case 4:
+            case 2:
               Navigator.pushNamed(context, '/events');
               break;
-            case 5:
+            case 3:
               Navigator.pushNamed(context, '/profile');
               break;
 
-              case 6:
-              Navigator.pushNamed(context, '/dashboard');
-              break;
-              case 7:
-              Navigator.pushNamed(context, '/feedscreen');
-              break;
+
+
             default:
           }
         },

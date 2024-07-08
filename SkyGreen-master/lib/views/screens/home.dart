@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text("Events"),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
         actions: <Widget>[
           PopupMenuButton<String>(
             onSelected: (value) {
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(
-          Icons.add,
+          Icons.home,
           color: Colors.white,
         ),
         backgroundColor: Color.fromARGB(255, 16, 94, 6),

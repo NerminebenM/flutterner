@@ -1,70 +1,52 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class UserPost extends StatelessWidget {
-  String? id;
-  final String username;
-  final String postContent;
-  final String imageUrl; // You can use this for post images
-  final Function()? onLikePressed;
+import 'PostList.dart';
 
-  UserPost({
-    required this.id,
-    required this.username,
-    required this.postContent,
-    this.imageUrl = '',
-    this.onLikePressed,
-  });
+class ReservedBooksPage extends StatefulWidget {
+  @override
+  _ReservedBooksPageState createState() => _ReservedBooksPageState();
+}
+
+class _ReservedBooksPageState extends State<ReservedBooksPage> {
+  List<Book> reservedBooks = [];
+
+  @override
+  void initState() {
+    super.initState();
+    fetchReservedBooks();
+  }
+
+  Future<void> fetchReservedBooks() async {
+    final prefs = await SharedPreferences.getInstance();
+    final reservedBooksString = prefs.getString('reservedBooks') ?? '[]';
+    final List<dynamic> reservedBooksJson = json.decode(reservedBooksString);
+
+    setState(() {
+      reservedBooks = reservedBooksJson.map((json) => Book.fromJson(json)).toList();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 20,
-                  // You can replace the placeholder image with the user's profile image
-                  backgroundImage: NetworkImage('https://picsum.photos/40/40'),
-                ),
-                SizedBox(width: 8),
-                Text(
-                  username,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Reserved Books'),
+      ),
+      body: reservedBooks.isEmpty
+          ? Center(child: Text('No reserved books yet.'))
+          : ListView.builder(
+        itemCount: reservedBooks.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(reservedBooks[index].imageUrl),
             ),
-          ),
-          if (imageUrl.isNotEmpty)
-            Image.network(
-              imageUrl,
-              height: 200, // Adjust the height as needed
-              fit: BoxFit.cover,
-            ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(postContent),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IconButton(
-                icon: Icon(Icons.favorite_border),
-                onPressed: onLikePressed,
-              ),
-              IconButton(
-                icon: Icon(Icons.comment),
-                onPressed: () {
-                  // Implement comment functionality
-                },
-              ),
-            ],
-          ),
-        ],
+            title: Text(reservedBooks[index].title),
+            subtitle: Text(reservedBooks[index].author),
+          );
+        },
       ),
     );
   }
